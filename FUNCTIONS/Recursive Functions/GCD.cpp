@@ -7,9 +7,6 @@ int gcd(int a, int b){
     }
     return gcd(b, a % b);
 }
-int lcm(int a, int b){
-    return (a * b)/gcd(a, b);
-}
 
 int main(){
     int a, b;
@@ -19,9 +16,9 @@ int main(){
     cout << "Enter b: ";
     cin >> b;
     
-    int result = lcm(a,b);
+    int result = gcd(a,b);
     
-    cout << "LCM of " << a << " and " << b << " is " << result << endl;
+    cout << "GCD of " << a << " and " << b << " is " << result << endl;
     
     return 0;
 }
