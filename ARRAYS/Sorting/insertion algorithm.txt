@@ -1,0 +1,25 @@
+[5, 2, 8, 9]
+
+for(int i = 1; i < size; i++){
+	int key = array[i];
+	int j = i - 1;
+
+	while(j <= 0 && array[j] > key){
+		array[j + 1] = array[j];
+		j = j - 1;
+	}
+	array[j + 1] = key;
+}
+
+2 is the key since array[1] = 2
+5 is array[j] since i - 1 = 0 and array[0] = 5
+
+0(j) = 0 && 5(array[j]) > 2(key) == TRUE
+
+array[j + 1] = 2
+array[j] = 5
+
+2 will go to 5's position
+array[j + 1] = array[j]
+
+[2, 5, 8, 9] 

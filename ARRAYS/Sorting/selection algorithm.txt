@@ -1,0 +1,46 @@
+[5,2,9,8]
+
+for(int i = 0; i < size - 1; i++){
+	int min_idx = i;
+	
+	for(int j = i + 1; j < size; j++){
+		
+		if(array[j] < array[min_idx]){
+			
+			min_idx = j;
+		}		
+	}
+	
+	if(min_idx != i){
+		
+		int temp = array[i];
+		array[i] = array[min_idx];
+		array[min_idx] = temp;
+	}
+}
+
+Assume that 5 (array[0]) is the minimum value
+min_idx = 0
+
+Next for loop starts at the second index
+for(int j = i + 1; j < size; j++)
+j = 1
+
+If 2(array[1]) < 5(array[0]) == True
+Change minimum index
+min-idx = j
+min_idx = 1
+
+Exit the second for loop
+
+1 != 0 == TRUE
+temp = 5(array[0])
+
+[TEMP, 2, 9, 8]
+
+array[0] = 2(array[1])
+array[2] = 5(temp)
+
+[2, 5, 9, 8]
+
+REPEAT until [2, 5, 8, 9]
