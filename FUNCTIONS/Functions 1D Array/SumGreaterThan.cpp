@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 void sumGreaterThan(int arr[], int size, float x){
@@ -8,7 +9,7 @@ void sumGreaterThan(int arr[], int size, float x){
             sum += arr[i];
         }
     }
-    cout << "The sum of the elements greater than " << x << " is: " << sum << endl;
+    cout << "The sum of the elements greater than " << x << " is: " << fixed << setprecision(2) << sum << endl;
 }
 
 int main(){
