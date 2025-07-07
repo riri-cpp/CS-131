@@ -30,3 +30,4 @@ int main() {
     cout << "Result: (" << x_inter << ", " << y_inter << ", " << w_inter << ", " << h_inter << ")";
 
     return 0;
+}
