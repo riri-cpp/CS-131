@@ -15,10 +15,11 @@ void addNode(int n, Node *&head, Node *&tail){
         tail = newValue;
     }
     else{
-        tail = newValue;
         tail -> next = newValue;
+        tail = newValue;
     }
 }
+
 void printList(Node *n){
     while(n != NULL){
         cout << n->data << " ";
