@@ -17,7 +17,7 @@ void addNode(int n, Node *&head, Node *&tail){
     }
     else{
         tail -> next = newNode;
-        tail = tail -> next;
+        tail = newNode;
     }
 }
 
